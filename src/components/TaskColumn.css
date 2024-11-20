@@ -1,0 +1,17 @@
+.task_column_heading {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-top: 10vh;
+}
+
+.task_column_icon {
+    width: 30px;
+    margin-right: 5px;
+}
+
+@media (max-width: 767px) {
+    .task_column_heading{
+        margin-top: 20vh;
+    }
+}

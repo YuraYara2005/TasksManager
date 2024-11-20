@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #424347;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.app_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 15px;
+    height: fit-content;
+}
+
+.app_header > form {
+    width: 100%;
+    max-width: 600px; /* Limit maximum width */
+    box-sizing: border-box; /* Ensure padding is accounted for */
+}
+
+/* Input Field */
+.task_input {
+    font-size: 20px;
+    font-weight: 500;
+    background: #f9f9f9;
+    color: #000;
+    border: 1px solid #dfe3e6;
+    border-radius: 5px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.task_input::placeholder {
+    color: #686868;
+}
+
+/* Bottom Line */
+.task_form_bottom_line {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping on smaller devices */
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; 
+}
+
+/* Tag Buttons */
+.tag_button {
+    margin-right: 5px;
+    padding: 8px 12px;
+    border-radius: 20px; /* Rounded buttons */
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #6457f9;
+    color: #fff;
+    cursor: pointer;
+    border: none; /* Remove border */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.tag_button:hover {
+    background-color: #5746d8;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.tag_button.selected {
+    background-color: #44c767; /* Green for selected state */
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Status Dropdown */
+.task_status {
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 10px;
+    width: 120px;
+    box-sizing: border-box;
+}
+
+/* Add Task Button */
+.task_submit {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #6457f9;
+    color: #fff;
+    border-radius: 5px;
+    height: 45px;
+    padding: 0 15px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.task_submit:hover {
+    background-color: #5746d8;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .task_form_bottom_line {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 10px;
+    }
+
+    .task_status,
+    .task_submit {
+        width: 100%; /* Full width for dropdown and button */
+    }
+}
+
+@media (max-width: 480px) {
+    .task_input {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .tag_button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .task_status {
+        font-size: 14px;
+    }
+
+    .task_submit {
+        font-size: 14px;
+    }
+}
